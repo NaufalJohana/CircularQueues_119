@@ -38,7 +38,7 @@ public:
 		queue_array[REAR] = num;
 	}
 
-	void remove(){
+	void remove() {
 		// cek apakah antrian kosong
 		if (FRONT == -1) {
 			cout << "Queue underflow\n";
@@ -51,4 +51,12 @@ public:
 			FRONT = -1;
 			REAR = -1;
 		}
-		
+		else {
+			//jika elemen yang dihapus berada di posisi terkahir array, kembali ke awal array
+			if (FRONT == max - 1)
+				FRONT = 0;
+			else
+				FRONT = FRONT + 1;
+		}
+	}
+
