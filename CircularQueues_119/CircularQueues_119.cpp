@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-class Queues {;
+class Queues {
+	;
 	int FRONT, REAR, max = 5;
 	int queue_array[5];
 
@@ -60,7 +61,7 @@ public:
 		}
 	}
 
-	void display () {
+	void display() {
 		int FRONT_position = FRONT;
 		int REAR_position = REAR;
 
@@ -86,3 +87,16 @@ public:
 				cout << queue_array[FRONT_position] << "  ";
 				FRONT_position++;
 			}
+
+			FRONT_position = 0;
+
+			// Iterasi dari awal array hingga REAR
+			while (FRONT_position <= REAR_position) {
+				cout << queue_array[FRONT_position] << "  ";
+				FRONT_position++;
+			}
+			cout << endl;
+		}
+	}
+};
+
